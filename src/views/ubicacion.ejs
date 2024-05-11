@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Pizza De El Canas</title>
+    <link rel="stylesheet" href="../public/css/ubicacion.css" />
+    <link rel="icon" type="image/jpg" href="favicon/pizza2.png" />
+    <!--Tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/80719e25d6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Header-->
+    <header
+      class="h-64 w-full bg-cover"
+      style="
+        background-image: url(https://www.itl.cat/pngfile/big/297-2975266_making-pizza-food-and-drink-pizzas-tomato-tomatoes.jpg);
+      "
+    >
+      <div class="flex flex-col items-center justify-center h-full">
+        <h1
+          class="text-center text-5xl md:text-6xl lg:text-7xl font-serif text-white"
+        >
+          <i>La Pizza <br />De El Canas</i>
+        </h1>
+      </div>
+    </header>
+    <!--Navbar-->
+    <section class="my-12 max-w-screen-xl mx-auto px-6">
+      <nav class="flex items-center justify-center space-x-6">
+        <a href="index">Menú</a>
+        <a
+          href="ubicacion"
+          class="bg-orange-300 py-1 px-4 border border-orange-400 rounded-full"
+          >Ubicación</a
+        >
+        <a href="precios">Precios</a>
+      </nav>
+      <!--Contenido-->
+      <aside class="mt-5">
+        <p>
+          Estamos ubicados 📌 en el barrio bochica frente al multiparque
+          centenario en la carrera 4 #6a-47
+          <i class="underline decoration-red-500 font-bold">
+            !QUE ESPERAS PARA VISITARNOS¡
+          </i>
+        </p>
+      </aside>
+
+      <div class="mapa-responsivo">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2165.378918150403!2d-73.36026109289327!3d5.519088824269505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a7d0eee1e8033%3A0x5aa1415eec18633a!2sLa%20Pizza%20De%20%C3%89l%20Canas!5e0!3m2!1ses!2sco!4v1694278130307!5m2!1ses!2sco"
+          width="1200"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="mt-5"
+        ></iframe>
+      </div>
+    </section>
+    <!--Pie de paguina-->
+
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>
