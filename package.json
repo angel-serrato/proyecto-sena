@@ -2,10 +2,10 @@
   "name": "proyecto-sena",
   "version": "1.0.0",
   "description": "proyecto del sena para ganar dinero",
-  "main": "index.js",
+  "main": "main.js",
   "type": "module",
   "scripts": {
-    "dev" : "nodemon index.js "
+    "dev" : "nodemon src/main.js"
     
   },
   "keywords": [],
