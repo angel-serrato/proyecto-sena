@@ -4,24 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../public/css/loginSigin.css" />
+    <link rel="stylesheet" href="css/loginSigin.css" />
 
     <title>Iniciar sesión</title>
     <!--Tailwind-->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/login.js"></script>
     <!--Favicon-->
-    <link
-      rel="icon"
-      type="image/jpeg"
-      href="../public/ima/favicon/pizza2.png"
-    />
+    <link rel="icon" type="image/jpg" href="ima/favicon/pizza2.png" />
   </head>
 
   <body>
     <form
-      action="/login"
-      method="post"
       class="bg-white w-96 mt-36 p-4 rounded-lg drop-shadow-2xl mx-auto border-solid border-2 border-gray-200"
+      id="loginForm"
     >
       <img class="w-24 mx-auto rounded-full" src="../ima/logo.png" alt="logo" />
       <p class="text-orange-400 text-center text-xl italic font-semibold p-4">
@@ -45,13 +41,16 @@
       </div>
       <div>
         <button
-          type="submit"
+          type="button"
           class="w-full py-3 bg-orange-400 text-white text-xl focus:outline-none mt-6 rounded-lg cursor: pointer"
+          id="btnEnviar"
         >
-          Sign up
+          iniciar sesión
         </button>
       </div>
+      <p id="msm" class="alerta" hidden="true">
+        Usuario y/o contraseña invalidos
+      </p>
     </form>
-    <script src="../public/js/login.js"></script>
   </body>
 </html>

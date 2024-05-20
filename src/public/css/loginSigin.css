@@ -6,3 +6,9 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.alerta{
+    color:crimson;
+    text-align: center;
+    margin-top: 10px;
+}

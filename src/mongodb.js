@@ -21,6 +21,25 @@ const LogInSchema = new mongoose.Schema({
   },
 });
 
+const ProductsSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    require: true,
+  },
+  cantDayAnt: {
+    type: Number,
+    require: true,
+  },
+  cantDayEnt: {
+    type: Number,
+    require: true,
+  },
+  cantDayFinal: {
+    type: Number,
+    require: true,
+  },
+});
 const collection = new mongoose.model("LogIncollection", LogInSchema);
+const products = new mongoose.model("Inventarios", ProductsSchema);
 
-export default collection;
+export { collection, products };
