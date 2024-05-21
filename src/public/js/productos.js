@@ -1,14 +1,4 @@
-//Log out
-document.addEventListener("DOMContentLoaded", function () {
-  const logout = () => {
-    //Elimina el ID del usuario al momento de cerrar sesión
-    localStorage.removeItem("id");
-    window.location = "/";
-  };
-  const logoutButton = document.getElementById("logoutButton");
-  logoutButton.addEventListener("click", logout);
-});
-
+// obtener el id de usuario del localstorage
 const userId = localStorage.getItem("id");
 console.log("fetch", userId);
 fetch("/verificar-id", {
@@ -34,4 +24,27 @@ fetch("/verificar-id", {
     window.location.href = "/"; //Redirigir al inicio de sesión si el acceso esta denegado
   });
 
-// obtener el id de usuario del localstorage
+//Log out
+document.addEventListener("DOMContentLoaded", function () {
+  const logout = () => {
+    //Elimina el ID del usuario al momento de cerrar sesión
+    localStorage.removeItem("id");
+    window.location = "/";
+  };
+  const logoutButton = document.getElementById("logoutButton");
+  logoutButton.addEventListener("click", logout);
+});
+
+//Evento para abrir el modal de agregar productos
+
+const modal = document.getElementById("crud-modal");
+const openModal = document.querySelector('[data-modal-target="#crud-modal"]');
+const closeModal = modal.querySelector('[data-modal-close="crud-modal"]');
+//Abrir modal
+openModal.addEventListener("click", () => {
+  modal.classList.remove("hidden");
+});
+//Cerrar modal
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
