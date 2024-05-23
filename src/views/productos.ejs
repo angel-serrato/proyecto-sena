@@ -10,25 +10,7 @@
   </head>
 
   <body>
-    <button
-      id="logoutButton"
-      type="button"
-      class="text-white inline-flex items-center bg-orange-400 hover:bg-orange-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-    >
-      Cerrar sesión
-    </button>
-    <h1>Productos</h1>
-
     <!-- Modal toggle -->
-
-    <button
-      data-modal-target="#crud-modal"
-      data-modal-toggle="crud-modal"
-      class="block text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-      type="button"
-    >
-      Agregar producto
-    </button>
 
     <!-- Main modal -->
     <div
@@ -135,7 +117,7 @@
             </div>
             <button
               type="submit"
-              class="text-white inline-flex items-center bg-blue-400 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              class="text-white inline-flex items-center bg-lime-500 hover:bg-lime-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
             >
               <svg
                 class="me-1 -ms-1 w-5 h-5"
@@ -155,6 +137,42 @@
         </div>
       </div>
     </div>
+
+    <!-- Table -->
+
+    <main class="container">
+      <section class="crud">
+        <h1 class="crud__title">CRUD de Inventario</h1>
+        <button
+          data-modal-target="#crud-modal"
+          data-modal-toggle="crud-modal"
+          class="block text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+          type="button"
+        >
+          Agregar producto
+        </button>
+        <table class="crud__table">
+          <thead>
+            <tr>
+              <th class="table__header">Nombre</th>
+              <th class="table__header">Cant Ant</th>
+              <th class="table__header">Cant Ent</th>
+              <th class="table__header">Cant Final</th>
+            </tr>
+          </thead>
+          <tbody id="table__body" class="table__body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- Cerrar sesión-->
+    <button
+      id="logoutButton"
+      type="button"
+      class="text-white inline-flex items-center bg-orange-400 hover:bg-orange-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+    >
+      Cerrar sesión
+    </button>
     <!-- Tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
 

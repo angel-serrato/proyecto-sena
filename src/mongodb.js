@@ -5,7 +5,7 @@ mongoose
   //Conectarse a mongo compass
   // .connect(process.env.URI)
   //Conectarse a mongo atlas
-  .connect(process.env.URL)
+  .connect(process.env.MONGO_URL)
 
   .then(() => {
     console.log("Conectado a mongodb");
@@ -44,6 +44,7 @@ const ProductsSchema = new mongoose.Schema({
   },
 });
 const collection = new mongoose.model("LogIncollection", LogInSchema);
-const products = new mongoose.model("Inventarios", ProductsSchema);
+//const products = new mongoose.model("Inventarios", ProductsSchema);
 
-export { collection, products };
+// export { collection, products };
+export default collection;
