@@ -2,7 +2,11 @@ import "dotenv/config";
 import mongoose from "mongoose";
 
 mongoose
-  .connect(process.env.URI)
+  //Conectarse a mongo compass
+  // .connect(process.env.URI)
+  //Conectarse a mongo atlas
+  .connect(process.env.URL)
+
   .then(() => {
     console.log("Conectado a mongodb");
   })
