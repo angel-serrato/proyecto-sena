@@ -17,6 +17,8 @@ app.set('view engine', 'ejs');
 
 app.use(indexRoutes);
 
+app.use(express.static(join(__dirname, 'public')));
+
 app.listen(3000, () => {
     console.log('Server on port 3000');
 });
