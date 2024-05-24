@@ -4,14 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
-    </title>
+    <%- include('partials/head')%>
+        <title>
+            <%= title %>
+        </title>
 </head>
 
 <body>
     <%- include('partials/navigation') %>
-        <h1>About</h1>
+        <main class="vh-100 container pt-2 text-center d-flex justify-content-center align-items-center">
+            <section>
+                <h1 class="display-1">About</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, vitae. Fugit, autem? Velit veniam
+                    mollitia autem eveniet, dicta esse. Aliquid magni quo dicta delectus iure accusantium laborum
+                    veritatis, repellendus placeat alias perspiciatis maiores eum. Voluptatem doloremque nisi rem illo
+                    accusantium? Eligendi ab, omnis perferendis aperiam deserunt velit, error voluptatibus voluptate
+                    facilis iure illum porro quisquam? Dolorem quae mollitia, maiores architecto corporis fugit optio,
+                    sapiente assumenda nulla numquam quis illo dolor libero tenetur unde totam dignissimos consequatur,
+                    sed incidunt vitae et? Autem cum temporibus aliquid sequi possimus in doloremque! Illo id cupiditate
+                    expedita dignissimos consequuntur quaerat nihil natus reiciendis laboriosam hic.</p>
+            </section>
+        </main>
         <%- include('partials/footer') %>
 </body>
 
