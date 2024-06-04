@@ -17,4 +17,8 @@ router.get('/terminos', (req, res) => {
     res.render('terminos', { title: 'Terminos y condiciones' })
 });
 
+router.get('/politica', (req, res) => {
+    res.render('politica', { title: 'Política de privacidad' })
+});
+
 export default router;
