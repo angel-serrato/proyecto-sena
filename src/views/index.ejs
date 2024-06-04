@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Pizza De El Canas</title>
+    <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="image/jpg" href="favicon/pizza2.png" />
     <!--Tailwind-->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,109 +16,278 @@
 
 </head>
 
+
 <body>
-      
-    
- <!--Header-->
-<header class="h-64 w-full bg-cover" style="background-image: url(https://www.itl.cat/pngfile/big/297-2975266_making-pizza-food-and-drink-pizzas-tomato-tomatoes.jpg);">
-<h1 class="text-center text-5xl md:text-6xl lg:text-7xl font-serif text-white flex flex-col items-center justify-center h-full"><i>La Pizza <br>De El Canas</i></h1>
-</header>
+    <!--Header-->
+    <header class="relative ">
+        <img src="ima/pexels-muffin-1653877.jpg" class="h-64 w-full bg-cover " alt="">
+        <div class="absolute inset-0 flex items-center justify-center">
+            <h1 class="text-center text-white text-5xl md:text-6xl lg:text-7xl font-serif">
+                <i>La Pizza <br>De El Canas</i>
+            </h1>
+        </div>
+    </header>
 
- <!--Navbar-->
-<main class="my-12 px-6">
-<nav class="flex items-center justify-center space-x-6">
-<a href="index" class="bg-orange-300 py-1 px-4 border border-orange-400 rounded-full">Menú</a>
-<a href="ubicacion" >Ubicación</a>
-<a href="precios" >Precios</a>
-</nav>
+    <!-- Barra de navegacion -->
+    <nav class=" py-4 relative  ">
+        <div class="container mx-auto flex px-8 xl:px-0">
 
- <!--Contenido-->
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
-    <article class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg ">
-<em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 "> Carnes
-</em>
-<img class="w-64 mx-auto transform transition duration-300 hover:scale-105"src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
-<div class="flex flex-col items-center my-3 space-y-2">
-<h1 class="text-gray-900 text-lg">
-    Ingredientes
-</h1>
-<p class="text-gray-500 text-sm text-center">
-    Pomodoro, jamón, salami, chorizo, pollo desmechado y queso mozarella.
-</p>
-</div>
-</article>
+            <div class="flex lg:hidden">
+                <button><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div class="lg:flex hidden flex-grow justify-center">
+                <div>
+                    <button class="bg-orange-400 px-4 py-2 rounded-lg mr-4">
+                        <a href="#menu" class="font-bold text-white">Menú</a>
+                    </button>
+                    <button class="bg-orange-400 px-4 py-2 rounded-lg mr-4">
+                        <a href="#precios" class="font-bold text-white">Precios</a>
+                    </button>
+                    <button class="bg-orange-400 px-4 py-2 rounded-lg">
+                        <a href="#ubicación" class="font-bold text-white">Visítanos</a>
+                    </button>
+                </div>
+            </div>
 
+        </div>
+    </nav>
 
-<article class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
-<em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Hawaiana</em>
-<img class="w-64 mx-auto transform transition duration-300 hover:scale-105"src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
-<div class="flex flex-col items-center my-3 space-y-2">
-    <h1 class="text-gray-900 text-lg">
-        Ingredientes
-    </h1>
-    <p class="text-gray-500 text-sm text-center">
-        Pomodoro, jamon, piña y queso mozarella.
-    </p>
-</div>
-</article>
-
-<article class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
-    <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Mexicana</em>
-    <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
-    <div class="flex flex-col items-center my-3 space-y-2">
-        <h1 class="text-gray-900 text-lg">
-            Ingredientes
+    <!-- Contenido principal -->
+    <main class="my-12 px-6">
+        <h1 id="menu" class="text-center md:text-1xl lg:text-3xl font-serif">
+            <i>Menú</i>
         </h1>
-        <p class="text-gray-500 text-sm text-center">
-            Pomodoro, carne molida, queso mozarella, pico de gallo, jalapeños, maiz tierno, pimentón y tostacos.
-        </p>
-    </div>
-</article>
-<article class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
-    <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Criolla</em>
-    <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
-    <div class="flex flex-col items-center my-3 space-y-2">
-        <h1 class="text-gray-900 text-lg">
-            Ingredientes
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg ">
+                <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">
+                    Carnes
+                </em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        Ingredientes
+                    </h1>
+                    <p class="text-gray-500 text-sm text-center">
+                        Pomodoro, jamón, salami, chorizo, pollo desmechado y queso mozarella.
+                    </p>
+                </div>
+            </article>
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg ">
+                <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">
+                    Carnes
+                </em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        Ingredientes
+                    </h1>
+                    <p class="text-gray-500 text-sm text-center">
+                        Pomodoro, jamón, salami, chorizo, pollo desmechado y queso mozarella.
+                    </p>
+                </div>
+            </article>
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg ">
+                <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">
+                    Carnes
+                </em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        Ingredientes
+                    </h1>
+                    <p class="text-gray-500 text-sm text-center">
+                        Pomodoro, jamón, salami, chorizo, pollo desmechado y queso mozarella.
+                    </p>
+                </div>
+            </article>
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+                <em
+                    class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Hawaiana</em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        Ingredientes
+                    </h1>
+                    <p class="text-gray-500 text-sm text-center">
+                        Pomodoro, jamon, piña y queso mozarella.
+                    </p>
+                </div>
+            </article>
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+                <em
+                    class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Mexicana</em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        Ingredientes
+                    </h1>
+                    <p class="text-gray-500 text-sm text-center">
+                        Pomodoro, carne molida, queso mozarella, pico de gallo, jalapeños, maiz
+                        tierno, pimentón y tostacos.
+                    </p>
+                </div>
+            </article>
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+                <em
+                    class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Criolla</em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        Ingredientes
+                    </h1>
+                    <p class="text-gray-500 text-sm text-center">
+                        Pomodoro, carne desmechada, queso mozarella, maiz tierno y hogao.
+                    </p>
+                </div>
+            </article>
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+                <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Pollo
+                    con champoñoses</em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        Ingredientes
+                    </h1>
+                    <p class="text-gray-500 text-sm text-center">
+                        Pomodoro, champiñones, queso mozarella y pollo desmechado.
+                    </p>
+                </div>
+            </article>
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+                <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Costillitas
+                    BBQ</em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        Ingredientes
+                    </h1>
+                    <p class="text-gray-500 text-sm text-center">
+                        Pomodoro, costillas de cerdo deshuesadas, queso mozarella y salsa BBQ de
+                        la casa.
+                    </p>
+                </div>
+            </article>
+    </main>
+
+    <!-- Seccion de precios -->
+    <main class="my-12 px-6">
+        <h1 id="precios" class="text-center md:text-1xl lg:text-3xl font-serif"><i>Precios</i>
         </h1>
-        <p class="text-gray-500 text-sm text-center">
-            Pomodoro, carne desmechada, queso mozarella, maiz tierno y hogao.
-        </p>
-    </div>
-</article>
-<article class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
-    <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Pollo con champoñoses</em>
-    <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
-    <div class="flex flex-col items-center my-3 space-y-2">
-        <h1 class="text-gray-900 text-lg">
-            Ingredientes
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg ">
+                <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">
+                    Familiar (55cm)
+                </em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        $46.000
+                    </h1>
+                </div>
+            </article>
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+                <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Junior
+                    (40cm)</em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        $36.000
+                    </h1>
+                </div>
+            </article>
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+                <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Pizzeta
+                    (23cm)</em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        $18.000
+                    </h1>
+                </div>
+            </article>
+            <article
+                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+                <em
+                    class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Porción</em>
+                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="flex flex-col items-center my-3 space-y-2">
+                    <h1 class="text-gray-900 text-lg">
+                        $6.000
+                    </h1>
+                </div>
+            </article>
+    </main>
+
+    <!-- Seccion de ubicacion -->
+    <section class="my-12 max-w-screen-xl mx-auto px-6">
+        <h1 id="ubicación" class="text-center md:text-1xl lg:text-3xl font-serif "><i>Ven a visitarnos</i>
         </h1>
-        <p class="text-gray-500 text-sm text-center">
-            Pomodoro, champiñones, queso mozarella y pollo desmechado.
-        </p>
-    </div>
-</article>
+        <aside class="mt-5">
+            <p>
+                📍 ¡Descubre nuestro lugar! Nos encontramos en el barrio Bochica, justo enfrente del al Multiparque
+                Centenario, en la Carrera 4 #6a-47. ¡No esperes más para visitarnos y disfrutar de una experiencia
+                única! ¿Qué estás esperando? ¡Te esperamos con los brazos abiertos!</p>
+        </aside>
+        <div class="mapa-responsivo">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2165.378918150403!2d-73.36026109289327!3d5.519088824269505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a7d0eee1e8033%3A0x5aa1415eec18633a!2sLa%20Pizza%20De%20%C3%89l%20Canas!5e0!3m2!1ses!2sco!4v1694278130307!5m2!1ses!2sco"
+                frameborder="0" width="1200" height="400" style="border: 0" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="mt-5"></iframe>
+        </div>
+    </section>
 
-<article class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
-    <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Costillitas BBQ</em>
-    <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
-    <div class="flex flex-col items-center my-3 space-y-2">
-        <h1 class="text-gray-900 text-lg">
-            Ingredientes
-        </h1>
-        <p class="text-gray-500 text-sm text-center">
-            Pomodoro, costillas de cerdo deshuesadas, queso mozarella y salsa BBQ de la casa.
-        </p>
-    </div>
-</article>
+    <!-- Footer -->
+    <footer class="bg-orange-400 text-white py-6">
+        <div class="mx-auto flex flex-col items-center">
+            <div class="mb-4 text-center">
+                <div class="mb-4 text-center">
+                    <p class="text-lg font-semibold">La Pizza De El Canas</p>
+                </div>
+                <div class="mb-4 text-center">
+                    <p class="text-sm">Nuestra visión es llegar a más población Colombiana con nuestros sabores a un
+                        precio
+                        razonable.</p>
+                </div>
+                <p class="text-lg font-semibold">Contáctanos en nuestras redes sociales
+
+                <div class="ml-2">
+                    <a href="https://www.instagram.com/lapizzadeelcanas?igsh=MWh4NHZwc3gxa2pzNA==" target="_blank"
+                        class="text-white mr-2"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063942588806&mibextid=ZbWKwL" target="_blank"
+                        class="text-white mr-2"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/3134393277?text=Hola,%20me%20gustaría%20ordenar%20una%20pizza"
+                        target="_blank" class="text-white"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                </p>
+            </div>
 
 
 
-</main>
-<!--Pie de paguina-->
-
-<%- include("partials/footer.ejs") %>
-
+        </div>
+    </footer>
 
 </body>
 

@@ -1,181 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/productos.css" />
-    <title>Productos</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="ima/favicon/pizza2.png" />
-  </head>
 
-  <body>
-    <!-- Modal toggle -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title><%- title%></title> -->
+  <title>
+    <%= title %>
+  </title>
+  <!-- boostrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"
+    integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Libreria DataTables -->
+  <link href="https://cdn.datatables.net/v/bs4/dt-2.0.8/datatables.min.css" rel="stylesheet">
+</head>
 
-    <!-- Main modal -->
-    <div
-      id="crud-modal"
-      data-modal-target="crud-modal"
-      tabindex="-1"
-      aria-hidden="true"
-      class="flex hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
-    >
-      <div class="relative p-4 w-full max-w-md max-h-full">
-        <!-- Modal content -->
-        <div class="relative rounded-lg border border-gray-600">
-          <!-- Modal header -->
-          <div
-            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 bg-orange-400"
-          >
-            <h3 class="text-lg font-semibold text-white">
-              Crear nuevo producto
-            </h3>
+<body>
 
-            <button
-              type="button"
-              class="text-white bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
-              data-modal-close="crud-modal"
-            >
-              <svg
-                class="w-3 h-3"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 14"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                />
-              </svg>
-              <span class="sr-only">Cerrar modal</span>
-            </button>
-          </div>
-          <!-- Modal body -->
-          <form class="p-4 md:p-5">
-            <div class="grid gap-4 mb-4 grid-cols-2">
-              <div class="col-span-2">
-                <label
-                  for="name"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                  >Nombre</label
-                >
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-400 focus:outline-none"
-                  placeholder="Nombre del producto"
-                  required=""
-                />
-              </div>
-              <div class="col-span-2 sm:col-span-1">
-                <label
-                  for="product"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                  >Cantidad Ant</label
-                >
-                <input
-                  type="number"
-                  name="product"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-400 focus:outline-none"
-                  placeholder="0"
-                  required=""
-                />
-              </div>
-              <div class="col-span-2 sm:col-span-1">
-                <label
-                  for="product"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                  >Cantidad Ent</label
-                >
-                <input
-                  type="number"
-                  name="product"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-400 focus:outline-none"
-                  placeholder="0"
-                  required=""
-                />
-              </div>
-              <div class="col-span-2 sm:col-span-1">
-                <label
-                  for="product"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                  >Cantidad Final</label
-                >
-                <input
-                  type="number"
-                  name="product"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-400 focus:outline-none"
-                  placeholder="0"
-                  required=""
-                />
-              </div>
+  <!-- Header -->
+  <%- include("partials/headeradmi.ejs")%>
+
+    <div class="container ">
+      <div class="row my-4">
+        <div class="col-lg-12">
+          <% if (message) { %>
+            <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+              <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+              <strong>
+                <%= message.message %>
+              </strong>
             </div>
-            <button
-              type="submit"
-              class="text-white inline-flex items-center bg-lime-500 hover:bg-lime-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-            >
-              <svg
-                class="me-1 -ms-1 w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-              Añadir nuevo producto
-            </button>
-          </form>
+            <% } %>
+              <div class="table-respinsive ">
+                <% if(products !="" ) { %>
+                  <table class="table table-striped text-center">
+                    <thead>
+                      <tr class="table-dark ">
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Name product</th>
+                        <th>CantAnt</th>
+                        <th>CantEnt</th>
+                        <th>CantFinal</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% products.forEach((row, index)=> { %>
+                        <tr class="aling-middle">
+                          <td>
+                            <%= index %>
+                          </td>
+                          <td><img src=" <%=row.img%>" width="50" class="img-thumbnail"></td>
+                          <td>
+                            <%= row.name %>
+                          </td>
+                          <td class="">
+                            <%= row.cantDayAnt %>
+                          </td>
+                          <td>
+                            <%= row.cantDayEnt %>
+                          </td>
+                          <td>
+                            <%= row.cantDayFinal %>
+                          </td>
+                          <td>
+                            <!--Btn para editar  -->
+                            <a href="/edit/<%= row._id %>" class="text-success"><i
+                                class="fas fa-edit fa-lg mx-1"></i></a>
+                            <!-- Btn para eliminar -->
+                            <a href="/delete/<%= row._id %>" class="text-danger"><i
+                                class="fas fa-trash fa-lg mx-1"></i></a>
+                          </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                  </table>
+                  <% } else { %>
+                    <h1 class="text-center text-secondary mt-5">!No se encontraron productos en la base de datos¡</h1>
+                    <% }%>
+
+              </div>
         </div>
       </div>
     </div>
 
-    <!-- Table -->
+    <!-- Footer -->
+    <%- include("partials/footeradmi.ejs")%>
 
-    <main class="container">
-      <section class="crud">
-        <h1 class="crud__title">CRUD de Inventario</h1>
-        <button
-          data-modal-target="#crud-modal"
-          data-modal-toggle="crud-modal"
-          class="block text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-          type="button"
-        >
-          Agregar producto
-        </button>
-        <table class="crud__table">
-          <thead>
-            <tr>
-              <th class="table__header">Nombre</th>
-              <th class="table__header">Cant Ant</th>
-              <th class="table__header">Cant Ent</th>
-              <th class="table__header">Cant Final</th>
-            </tr>
-          </thead>
-          <tbody id="table__body" class="table__body"></tbody>
-        </table>
-      </section>
-    </main>
 
-    <!-- Cerrar sesión-->
-    <button
-      id="logoutButton"
-      type="button"
-      class="text-white inline-flex items-center bg-orange-400 hover:bg-orange-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-    >
-      Cerrar sesión
-    </button>
-    <!-- Tailwind css -->
-    <script src="https://cdn.tailwindcss.com"></script>
+</body>
 
-    <script src="js/productos.js"></script>
-  </body>
 </html>
