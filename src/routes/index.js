@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import collection from '../public/js/mongo.js';
 const router = Router();
 
 router.get('/', (req, res) => {
@@ -19,6 +20,31 @@ router.get('/terminos', (req, res) => {
 
 router.get('/politica', (req, res) => {
     res.render('politica', { title: 'Política de privacidad' })
+});
+
+router.post('/login', async (req, res) => {
+    try {
+        const user = await collection.findOne({ email: req.body.email });
+        if (!user) {
+            res.send('Usuario no encontrado');
+        }
+        if (user.password !== req.body.password) {
+            res.send('Nombre de usuario o contraseña incorrectos')
+        }
+        res.redirect('../admin');
+    } catch (error) {
+        console.log('Error en la autenticación', error)
+        res.status(500).send('Nombre de usuario o contraseña incorrectos')
+    }
+});
+
+router.get('/admin', (req, res) => {
+    // if (req.isAuthenticated()) {
+    //     res.render('admin', { title: 'Admin' });
+    // } else {
+    //     res.redirect('/login');
+    // }
+    res.render('admin', { title: 'Admin' });
 });
 
 export default router;

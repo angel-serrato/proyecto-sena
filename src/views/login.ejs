@@ -21,17 +21,20 @@
                     </div>
 
                     <div class="modal-body p-5 pt-0">
-                        <form class="">
+                        <form action="/login" method="post">
+
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control rounded-3" id="floatingInput"
-                                    placeholder="name@example.com">
-                                <label for="floatingInput">Correo electrónico</label>
+                                <input type="email" name="email" class="form-control rounded-3"
+                                    placeholder="Correo electrónico">
+                                <label for="email">Correo electrónico</label>
                             </div>
+
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control rounded-3" id="floatingPassword"
-                                    placeholder="Password">
-                                <label for="floatingPassword">Contraseña</label>
+                                <input type="password" name="password" class="form-control rounded-3"
+                                    placeholder="Contraseña">
+                                <label for="password">Contraseña</label>
                             </div>
+
                             <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Iniciar
                                 sesión</button>
                             <small class="text-body-secondary">Al registrarte, aceptas los <a href="/terminos">Términos
