@@ -3,9 +3,9 @@ import Product from "./../models/product.js";
 
 const router = Router();
 
-router.get("/", (req, res) => res.render("login"));
-router.get("/signup", (req, res) => res.render("signup"));
-router.get("/index", (req, res) => res.render("index"));
+router.get("/login", (req, res) => res.render("login"));
+// router.get("/signup", (req, res) => res.render("signup"));
+router.get("/", (req, res) => res.render("index"));
 // Definición de la ruta GET para la URL raíz "/"
 router.get("/productos", async (req, res) => {
   try {
