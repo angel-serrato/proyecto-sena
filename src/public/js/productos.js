@@ -11,7 +11,7 @@ fetch("/verificar-id", {
   .then((response) => {
     console.log(response);
     if (!response.ok) {
-      window.location.href = "/";
+      window.location.href = "/login";
       throw new Error("Acceso denegado");
     }
     return response.json();
@@ -21,7 +21,7 @@ fetch("/verificar-id", {
   })
   .catch((error) => {
     console.log("Error:", error);
-    window.location.href = "/"; //Redirigir al inicio de sesión si el acceso esta denegado
+    window.location.href = "/login"; //Redirigir al inicio de sesión si el acceso esta denegado
   });
 
 //Cerrar sesion
@@ -29,10 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const logout = () => {
     //Elimina el ID del usuario al momento de cerrar sesión
     localStorage.removeItem("id");
-    window.location = "/";
+    window.location = "/login";
   };
   const logoutButton = document.getElementById("logoutButton");
   logoutButton.addEventListener("click", logout);
 });
-
-
