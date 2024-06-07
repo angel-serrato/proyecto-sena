@@ -13,6 +13,8 @@
 <body>
     <%- include('partials/header') %>
 
+        <!-- Heroe -->
+
         <div class="px-4 pt-5 my-5 text-center border-bottom" id="about">
             <h1 class="display-4 fw-bold text-body-emphasis">La Pizza de el Canas</h1>
             <div class="col-lg-6 mx-auto">
@@ -27,81 +29,93 @@
             </div>
         </div>
 
-        <!-- Album -->
+        <!-- Features / Menu -->
 
-        <!-- <div class="album py-5 bg-body-tertiary">
-            <div class="container">
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-body-secondary">9 mins</small>
-                                </div>
-                            </div>
+        <div class="container px-4 py-5" id="custom-cards">
+            <h2 class="pb-2 border-bottom">Nuestro Menú</h2>
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/hawaiana.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Hawaiana</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Jamón, Piña y Queso mozarella</small>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-body-secondary">9 mins</small>
-                                </div>
-                            </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/mexicana.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Mexicana</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Carne de res, Jalapeños y Maíz dulce</small>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-body-secondary">9 mins</small>
-                                </div>
-                            </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/criolla.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Criolla</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Chorizo, Pimientos y Cebolla</small>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/carnes.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Carnes</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Jamón, Salchicha y Pepperoni</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/champinones.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Pollo con champiñones</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Pollo, Champiñones y Queso mozarella</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/costillas.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Costillitas BBQ</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Costillas de cerdo, Salsa y Cebolla</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Jumbotron / Mapa -->
 
@@ -160,182 +174,6 @@
                 </div>
             </div>
         </div>
-
-
-        <!-- Features / Menu -->
-
-        <div class="container px-4 py-5" id="custom-cards">
-            <h2 class="pb-2 border-bottom">Nuestro Menú</h2>
-
-            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                        style="background-image: url('https://mandolina.co/wp-content/uploads/2023/06/pizza-hawaian-2.jpg'); background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Hawaiana</h3>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="me-auto">
-                                    <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
-                                        class="rounded-circle border border-white">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#geo-fill" />
-                                    </svg>
-                                    <small>Pizza</small>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#calendar3" />
-                                    </svg>
-                                    <small>3d</small>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                        style="background-image: url('https://mandolina.co/wp-content/uploads/2023/07/pizza-mexciana.png'); background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Mexicana</h3>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="me-auto">
-                                    <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
-                                        class="rounded-circle border border-white">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#geo-fill" />
-                                    </svg>
-                                    <small>Pizza</small>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#calendar3" />
-                                    </svg>
-                                    <small>4d</small>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                        style="background-image: url('https://saborargento.com.ar/wp-content/uploads/2023/12/Receta-de-Pizza-Criolla.jpg'); background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Criolla</h3>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="me-auto">
-                                    <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
-                                        class="rounded-circle border border-white">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#geo-fill" />
-                                    </svg>
-                                    <small>Pizza</small>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#calendar3" />
-                                    </svg>
-                                    <small>5d</small>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                        style="background-image: url('https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Carnes</h3>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="me-auto">
-                                    <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
-                                        class="rounded-circle border border-white">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#geo-fill" />
-                                    </svg>
-                                    <small>Pizza</small>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#calendar3" />
-                                    </svg>
-                                    <small>3d</small>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                        style="background-image: url('https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Pollo con champiñones</h3>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="me-auto">
-                                    <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
-                                        class="rounded-circle border border-white">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#geo-fill" />
-                                    </svg>
-                                    <small>Pizza</small>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#calendar3" />
-                                    </svg>
-                                    <small>4d</small>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                        style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Costillitas BBQ</h3>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="me-auto">
-                                    <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
-                                        class="rounded-circle border border-white">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#geo-fill" />
-                                    </svg>
-                                    <small>Pizza</small>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#calendar3" />
-                                    </svg>
-                                    <small>5d</small>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
 
         <%- include('partials/footer') %>
 </body>

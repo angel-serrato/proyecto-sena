@@ -72,27 +72,6 @@
             </div>
         </div>
 
-        <script>
-            const loginForm = document.getElementById('loginForm');
-            const errorMessage = document.getElementById('errorMessage');
-
-            loginForm.addEventListener('submit', async (event) => {
-                event.preventDefault();
-                const formData = new FormData(loginForm);
-                const response = await fetch('/login', {
-                    method: 'POST',
-                    body: formData
-                });
-                const data = await response.json();
-                if (response.ok) {
-                    window.location.href = '/admin';
-                } else {
-                    errorMessage.textContent = data.error;
-                    errorMessage.style.display = 'block';
-                }
-            });
-        </script>
-
         <%- include('partials/simple-footer') %>
 </body>
 
