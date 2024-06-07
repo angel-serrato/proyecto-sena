@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <%- include('partials/header') %>
+    <%- include('partials/login-header') %>
         <div class="modal modal-sheet position-static d-block p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
             <div class="modal-dialog" role="document">
                 <div class="modal-content rounded-4 shadow">
@@ -41,6 +41,12 @@
                                     y
                                     condiciones</a> y la
                                 <a href="/politica">Política de privacidad</a> de La pizza de el canas.</small>
+
+                            <div id="message" class="alert alert-danger btn w-100 mb-2 rounded-3 btn-primary"
+                                role="alert" hidden="true">
+                                <p>Usuario y/o contraseña incorrectos.</p>
+                            </div>
+
                             <hr class="my-4">
                             <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3 disabled" type="submit">
                                 <svg class="bi me-1" width="16" height="16">
@@ -65,7 +71,29 @@
                 </div>
             </div>
         </div>
-        <%- include('partials/footer-simple') %>
+
+        <script>
+            const loginForm = document.getElementById('loginForm');
+            const errorMessage = document.getElementById('errorMessage');
+
+            loginForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const formData = new FormData(loginForm);
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+                if (response.ok) {
+                    window.location.href = '/admin';
+                } else {
+                    errorMessage.textContent = data.error;
+                    errorMessage.style.display = 'block';
+                }
+            });
+        </script>
+
+        <%- include('partials/simple-footer') %>
 </body>
 
 </html>

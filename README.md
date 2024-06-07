@@ -21,8 +21,8 @@ https://www.npmjs.com/package/express
 ejs
 https://www.npmjs.com/package/ejs
 
-nodemailer
-https://www.npmjs.com/package/nodemailer
+express-session
+https://www.npmjs.com/package/express-session
 
 De pronto se podria usar
 npm bcrypt

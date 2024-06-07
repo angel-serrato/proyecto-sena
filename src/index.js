@@ -4,10 +4,18 @@ import ejs from 'ejs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import indexRoutes from './routes/index.js';
+import session from 'express-session';
 
 const app = express();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Configuración de la sesión usando el middleware express-session
+app.use(session({
+    secret: 'secret',
+    resave: false,
+    saveUninitialized: false
+}));
 
 // For parsing application/json
 app.use(express.json());
