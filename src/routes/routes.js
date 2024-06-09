@@ -1,5 +1,4 @@
 import { Router } from 'express'
-import login from '../config/login.js'
 const router = Router()
 
 router.get('/', (req, res) => {
@@ -18,6 +17,10 @@ router.get('/login', (req, res) => {
     res.render('login', { title: 'Iniciar Sesión' })
 })
 
+router.get('/admin', (req, res) => {
+    res.render('admin', { title: 'Administrador' })
+})
+
 router.get('/datos', (req, res) => {
     res.render('datos', { title: 'Política de Tratamiento de Datos' })
 })
@@ -28,6 +31,14 @@ router.get('/terminos', (req, res) => {
 
 router.get('/politica', (req, res) => {
     res.render('politica', { title: 'Política de Privacidad' })
+})
+
+router.get('/admin', (req, res) => {
+    if (req.session.user) {
+        res.render('admin', { title: 'Administrador' })
+    } else {
+        res.redirect('/login')
+    }
 })
 
 export default router

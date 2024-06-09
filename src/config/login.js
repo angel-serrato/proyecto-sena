@@ -11,11 +11,22 @@ router.post('/register', async (req, res) => {
         })
         await usuario.save()
         // res.send('Usuario creado correctamente')
-        res.redirect('/')
+        res.redirect('../admin')
     } catch (error) {
         res.status(500).send('Error al registrar el usuario')
     }
 })
+
+router.get('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            console.error('Error al cerrar la sesión', err)
+            res.status(500).send('Error al cerrar la sesión')
+        }
+        console.log('Sesión cerrada');
+        res.redirect('/login');
+    });
+});
 
 router.get('/find', async (req, res) => {
     try {
@@ -47,24 +58,5 @@ router.get('/edit/:id', async (req, res) => {
         res.render('/buscar')
     }
 })
-
-// router.get("/edit/:id", async (req, res) => {
-//     try {
-//       const id = req.params.id;
-//       const product = await Product.findById(id);
-
-//       if (product == null) {
-//         res.render("/productos");
-//       } else {
-//         res.render("edit_products", {
-//           title: "Editar Producto",
-//           product: product,
-//         });
-//       }
-//     } catch (err) {
-//       console.error(err);
-//       res.render("/productos");
-//     }
-//   });
 
 export default router
