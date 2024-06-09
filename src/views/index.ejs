@@ -4,22 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title%>
-    </title>
+    <%- include('../partials/head') %>
+        <title>
+            <%= title%>
+        </title>
 </head>
 
 <body>
-    <%- include('../partials/header'); %>
-        <h1>App</h1>
+    <!-- <h1>App</h1>
         <form action="/register" method="post">
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" placeholder="john@doe.com"><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" placeholder="password"><br><br>
             <button type="submit">Submit</button>
-        </form>
-        <%- include('../partials/footer'); %>
+        </form> -->
+
+    <%- include('../partials/header') %>
+
+        <!-- Heroe -->
+
+        <div class="px-4 pt-5 my-5 text-center border-bottom" id="about">
+            <h1 class="display-4 fw-bold text-body-emphasis">La Pizza de el Canas</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">¡Saborea la deliciosa esencia italiana en cada bocado! Visítanos en nuestro
+                    pintoresco rincón pizzero, a solo un paso de la bulliciosa capital colombiana.</p>
+            </div>
+            <div class="overflow-hidden" style="max-height: 30vh;">
+                <div class="container px-5">
+                    <img src="/img/hero-pizza.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Pizza image"
+                        width="700" height="500">
+                </div>
+            </div>
+        </div>
+
+        <!-- Features / Menu -->
+
+        <div class="container px-4 py-5" id="custom-cards">
+            <h2 class="pb-2 border-bottom">Nuestro Menú</h2>
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/hawaiana.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Hawaiana</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Jamón, Piña y Queso mozarella</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/mexicana.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Mexicana</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Carne de res, Jalapeños y Maíz dulce</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/criolla.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Criolla</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Chorizo, Pimientos y Cebolla</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/carnes.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Carnes</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Jamón, Salchicha y Pepperoni</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/champinones.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Pollo con champiñones</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Pollo, Champiñones y Queso mozarella</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('/img/costillas.jpg'); background-position: center;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Costillitas BBQ</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center me-3">
+                                    <small>Costillas de cerdo, Salsa y Cebolla</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jumbotron map -->>
+
+        <div class="container" id="mapa">
+            <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
+                <h1 class="text-body-emphasis">Ubicación</h1>
+                <p class="col-lg-6 mx-auto mb-4">
+                    Ubicados en el corazón de Tunja, nuestro encantador rincón pizzero te espera con los
+                    aromas tentadores de la auténtica cocina italiana.
+                </p>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.3213662710814!2d-73.36273022316631!3d5.519237794460892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a7d0eee1e8033%3A0x5aa1415eec18633a!2sLa%20Pizza%20De%20%C3%89l%20Canas!5e0!3m2!1sen!2sco!4v1717458336124!5m2!1sen!2sco"
+                                class="embed-responsive-item" style="border:0" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../partials/footer') %>
 </body>
 
 </html>
