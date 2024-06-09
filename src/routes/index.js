@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import collection from '../public/js/mongo.js';
+import login from '../public/js/login.js';
 const router = Router();
 
 router.get('/', (req, res) => {
@@ -26,53 +27,7 @@ router.get('/datos', (req, res) => {
     res.render('datos', { title: 'Política de tratamiento de datos' })
 });
 
-// Esta ruta para el inicio de sesion
-router.post('/login', async (req, res) => {
-    try {
-        const user = await collection.findOne({ email: req.body.email });
-        if (!user) {
-            res.send('Usuario no encontrado');
-        }
-        if (user.password !== req.body.password) {
-            return res.redirect('./login');
-            // res.send('Nombre de usuario o contraseña incorrectos')
-        }
-        req.session.user = user;
-        res.redirect('/admin');
-    } catch (error) {
-        console.log('Error en la autenticación', error)
-        res.status(500).send('Nombre de usuario o contraseña incorrectos')
-    }
-});
-
-// router.post('/login', async (req, res) => {
-//     try {
-//         const user = await collection.findOne({ email: req.body.email });
-//         if (!user) {
-//             return res.status(404).json({ error: 'Usuario no encontrado' });
-//         }
-//         if (user.password !== req.body.password) {
-//             return res.status(401).json({ error: 'Nombre de usuario o contraseña incorrectos' });
-//         }
-//         req.session.user = user;
-//         res.redirect('/admin');
-//     } catch (error) {
-//         console.log('Error en la autenticación', error);
-//         res.status(500).json('Nombre de usuario o contraseña incorrectos');
-//     }
-// });
-
-// Ruta para cerrar la sesión
-router.get('/logout', (req, res) => {
-    req.session.destroy((err) => {
-        if (err) {
-            console.error('Error al cerrar la sesión', err)
-            res.status(500).send('Error al cerrar la sesión')
-        }
-        console.log('Sesión cerrada');
-        res.redirect('/login');
-    });
-});
+router.use(login);
 
 router.get('/admin', (req, res) => {
     if (req.session.user) {
