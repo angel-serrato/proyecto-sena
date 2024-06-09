@@ -1,23 +1,19 @@
 {
   "name": "proyecto-sena",
   "version": "1.0.0",
-  "description": "Análisis y Desarrollo de Software SENA",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "express-session": "^1.18.0",
-    "mongoose": "^8.4.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.0"
+    "mongoose": "^8.4.1",
+    "nodemon": "^3.1.3"
   }
 }
