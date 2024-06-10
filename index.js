@@ -1,10 +1,10 @@
 import express from 'express'
-import routes from './routes/routes.js'
+import routes from './src/routes/routes.js'
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
-import connectDB from './config/database.js'
+import connectDB from './src/config/database.js'
 import dotenv from 'dotenv'
-import loginRouter from './config/login.js'
+import loginRouter from './src/config/login.js'
 import session from 'express-session'
 
 const port = process.env.PORT || 3000
@@ -15,7 +15,7 @@ dotenv.config()
 connectDB()
 
 app.set('view engine', 'ejs')
-app.set('views', join(__dirname, 'views'))
+app.set('views', join(__dirname, 'src', 'views'))
 
 app.use(session({
     secret: 'secret',
