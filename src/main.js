@@ -47,7 +47,7 @@ app.use(indexRoutes);
 app.post("/signup", async (req, res) => {
   console.log(req.body);
   const data = {
-    name: req.body.name,
+    email: req.body.email,
     password: req.body.password,
   };
 
@@ -57,7 +57,7 @@ app.post("/signup", async (req, res) => {
 
 app.post("/datos-user", async (req, res) => {
   const data = {
-    name: req.body.name,
+    email: req.body.email,
     password: req.body.password,
   };
 

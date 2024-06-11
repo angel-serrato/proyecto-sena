@@ -2,13 +2,13 @@ import mongoose from "mongoose";
 
 //Esquema de la base de datos para (Usuario)
 const LogInSchema = new mongoose.Schema({
-  name: {
+  email: {
     type: String,
-    require: true,
+    required: true,
   },
   password: {
     type: String,
-    require: true,
+    required: true,
   },
 });
 

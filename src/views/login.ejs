@@ -13,32 +13,42 @@
   <script src="js/login.js"></script>
   <!--Favicon-->
   <link rel="icon" type="image/jpg" href="ima/favicon/pizza2.png" />
+  <!-- Font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-  <form class="bg-white w-96 mt-36 p-4 rounded-lg drop-shadow-2xl mx-auto border-solid border-2 border-gray-200"
-    id="loginForm">
-    <img class="w-24 mx-auto rounded-full" src="../ima/logo.png" alt="logo" />
-    <p class="text-orange-400 text-center text-xl italic font-semibold p-4">
-      Iniciar sesión
-    </p>
-    <div class="flex flex-col space-y-6">
-      <input class="w-full px-4 py-3 rounded-lg focus:outline-none border border-gray-400" type="text"
-        placeholder="Nombre de usuario" name="name" value="" />
-      <input class="w-full px-4 py-3 rounded-lg border border-gray-400 focus:outline-none" type="password"
-        placeholder="Contraseña" name="password" value="" />
-    </div>
-    <div>
-      <button type="button"
-        class="w-full py-3 bg-orange-400 text-white text-xl focus:outline-none mt-6 rounded-lg cursor: pointer"
-        id="btnEnviar">
-        iniciar sesión
-      </button>
-    </div>
-    <p id="msm" class="alerta" hidden="true">
-      Usuario y/o contraseña invalidos
-    </p>
-  </form>
+  <div class="flex justify-center items-center h-screen">
+    <form class="bg-white w-96  p-4 rounded-lg drop-shadow-2xl  border-solid border-2 border-gray-200" id="loginForm"
+      method="get">
+      <p class="text-orange-400 text-center text-xl italic font-semibold p-4">
+        Iniciar sesión
+      </p>
+      <div class="flex flex-col space-y-6">
+
+        <input class="w-full px-4 py-3 rounded-lg focus:outline-none border border-gray-400" type="email"
+          placeholder="Correo electronico" name="email" value="" />
+
+        <div class="relative">
+          <input class="w-full px-4 py-3 rounded-lg border border-gray-400 focus:outline-none" type="password" id="pass"
+            placeholder="Contraseña" name="password" value="" />
+          <i class="fa-solid fa-eye input-icon absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer"></i>
+        </div>
+      </div>
+      <div>
+        <button type="button"
+          class="w-full py-3 bg-orange-400 text-white text-xl focus:outline-none mt-6 rounded-lg cursor: pointer"
+          id="btnEnviar">
+          Log in
+        </button>
+      </div>
+      <p id="msm" class="alerta" hidden="true">
+        Usuario y/o contraseña invalidos
+      </p>
+    </form>
+  </div>
 </body>
 
 </html>
