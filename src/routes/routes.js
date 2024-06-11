@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 // })
 
 router.get('/login', (req, res) => {
-    res.render('login', { title: 'Iniciar Sesión' })
+    res.render('login', { title: 'Iniciar Sesión', errorMsg: req.session.errorMsg })
 })
 
 router.get('/admin', (req, res) => {

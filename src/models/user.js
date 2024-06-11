@@ -11,6 +11,10 @@ const userSchema = new mongoose.Schema({
     }
 });
 
+userSchema.methods.validPassword = function (password) {
+    return password === this.password
+};
+
 const User = mongoose.model('usuarios', userSchema);
 
 export default User;
