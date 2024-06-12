@@ -5,20 +5,8 @@ router.get('/', (req, res) => {
     res.render('index', { title: 'La pizza de el canas' })
 })
 
-// router.get('/edit', (req, res) => {
-//     res.render('edit', { title: 'Edit' })
-// })
-
-// router.get('/buscar', (req, res) => {
-//     res.render('buscar', { title: 'Buscador' })
-// })
-
 router.get('/login', (req, res) => {
     res.render('login', { title: 'Iniciar Sesión', errorMsg: req.session.errorMsg })
-})
-
-router.get('/admin', (req, res) => {
-    res.render('admin', { title: 'Administrador' })
 })
 
 router.get('/datos', (req, res) => {
