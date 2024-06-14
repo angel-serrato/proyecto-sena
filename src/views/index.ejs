@@ -19,15 +19,20 @@
 
 <body>
     <!--Header-->
-    <header class="relative ">
-        <img src="ima/pexels-muffin-1653877.jpg" class="h-64 w-full bg-cover " alt="">
+    <header class="relative">
+        <img src="ima/header.jpg" class="h-64 w-full bg-cover" alt="">
         <div class="absolute inset-0 flex items-center justify-center">
             <h1 class="text-center text-white text-5xl md:text-6xl lg:text-7xl font-serif">
                 <i>La Pizza <br>De El Canas</i>
             </h1>
         </div>
+        <div class="absolute top-4 right-4">
+            <button
+                class="w-48 py-1.5 bg-orange-400 text-white focus:outline-none rounded-lg cursor-pointer hover:bg-orange-300">
+                <a href="login">Iniciar Sesión</a>
+            </button>
+        </div>
     </header>
-
     <!-- Barra de navegacion -->
     <nav class=" py-4 relative  ">
         <div class="container mx-auto flex px-8 xl:px-0">
@@ -37,13 +42,13 @@
             </div>
             <div class="lg:flex hidden flex-grow justify-center">
                 <div>
-                    <button class="bg-orange-400 px-4 py-2 rounded-lg mr-4">
+                    <button class="bg-orange-400 hover:bg-orange-300 px-4 py-2 rounded-lg mr-4">
                         <a href="#menu" class="font-bold text-white">Menú</a>
                     </button>
-                    <button class="bg-orange-400 px-4 py-2 rounded-lg mr-4">
+                    <button class="bg-orange-400 hover:bg-orange-300 px-4 py-2 rounded-lg mr-4">
                         <a href="#precios" class="font-bold text-white">Precios</a>
                     </button>
-                    <button class="bg-orange-400 px-4 py-2 rounded-lg">
+                    <button class="bg-orange-400 hover:bg-orange-300 px-4 py-2 rounded-lg">
                         <a href="#ubicación" class="font-bold text-white">Visítanos</a>
                     </button>
                 </div>
@@ -58,13 +63,14 @@
             <i>Menú</i>
         </h1>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg ">
+            <article class="bg-white border border-gray-200  p-4 rounded-lg ">
                 <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">
                     Carnes
                 </em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <img src="ima/carnes.jpg" alt="">
+                </div>
+
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         Ingredientes
@@ -74,44 +80,47 @@
                     </p>
                 </div>
             </article>
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg ">
+            <article class="bg-white border border-gray-200 p-4 rounded-lg ">
                 <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">
-                    Carnes
+                    Colombiana
                 </em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <img src="ima/colombiana.jpg" alt="">
+                </div>
+
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         Ingredientes
                     </h1>
                     <p class="text-gray-500 text-sm text-center">
-                        Pomodoro, jamón, salami, chorizo, pollo desmechado y queso mozarella.
+                        Pomodoro, carne molida, chorizo paisa, cebolla caramelizada y queso mozarella.
                     </p>
                 </div>
             </article>
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg ">
+            <article class="bg-white border border-gray-200 p-4 rounded-lg ">
                 <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">
-                    Carnes
+                    Napolitana
                 </em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <img src="ima/napolitana.jpg" alt="">
+                </div>
+
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         Ingredientes
                     </h1>
                     <p class="text-gray-500 text-sm text-center">
-                        Pomodoro, jamón, salami, chorizo, pollo desmechado y queso mozarella.
+                        Pomodoro, queso mozarella, tomate y finas hierbas.
                     </p>
                 </div>
             </article>
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+            <article class="bg-white border border-gray-200 p-4 rounded-lg">
                 <em
                     class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Hawaiana</em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <img src="ima/hawaiana.jpg" alt="">
+                </div>
+
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         Ingredientes
@@ -121,12 +130,13 @@
                     </p>
                 </div>
             </article>
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+            <article class="bg-white border border-gray-200 p-4 rounded-lg">
                 <em
                     class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Mexicana</em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <img src="ima/mexicana.jpg" alt="">
+                </div>
+
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         Ingredientes
@@ -137,12 +147,13 @@
                     </p>
                 </div>
             </article>
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+            <article class="bg-white border border-gray-200 p-4 rounded-lg">
                 <em
                     class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Criolla</em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <img src="ima/criolla.jpg" alt="">
+                </div>
+
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         Ingredientes
@@ -152,12 +163,13 @@
                     </p>
                 </div>
             </article>
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+            <article class="bg-white border border-gray-200 p-4 rounded-lg">
                 <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Pollo
                     con champoñoses</em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <img src="ima/champinones.jpg" alt="">
+                </div>
+
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         Ingredientes
@@ -167,12 +179,15 @@
                     </p>
                 </div>
             </article>
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+            <article class="bg-white border border-gray-200 p-4 rounded-lg">
                 <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Costillitas
                     BBQ</em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-64 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                        <img src="ima/costillas.jpg" alt="">
+                    </div>
+
+                </div>
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         Ingredientes
@@ -190,49 +205,50 @@
         <h1 id="precios" class="text-center md:text-1xl lg:text-3xl font-serif"><i>Precios</i>
         </h1>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg ">
+            <article class="bg-white border border-gray-200 p-4 rounded-lg ">
                 <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">
                     Familiar (55cm)
                 </em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <img src="ima/familiar.jpg" alt="">
+                </div>
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         $46.000
                     </h1>
                 </div>
             </article>
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+            <article class="bg-white border border-gray-200 p-4 rounded-lg">
                 <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Junior
                     (40cm)</em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <img src="ima/mediana.jpg" alt="">
+                </div>
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         $36.000
                     </h1>
                 </div>
             </article>
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+            <article class="bg-white border border-gray-200 p-4 rounded-lg">
                 <em class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Pizzeta
                     (23cm)</em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <img src="ima/pequena.jpg" alt="">
+                </div>
+
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         $18.000
                     </h1>
                 </div>
             </article>
-            <article
-                class="bg-white border border-gray-200 transform duration-300 hover:shadow-xl hover:scale-105 p-4 rounded-lg">
+            <article class="bg-white border border-gray-200 p-4 rounded-lg">
                 <em
                     class="bg-orange-200 border border-orange-400 rounded-full text-sm px-4 py-1 inline-block mb-4 ">Porción</em>
-                <img class="w-64 mx-auto transform transition duration-300 hover:scale-105"
-                    src="ima/pexels-yassir-abbas-12046657.jpg" alt="">
+                <div class="w-auto h-56 overflow-hidden mx-auto transform transition duration-300 hover:scale-105">
+                    <img src="ima/porcion.jpg" alt="">
+                </div>
                 <div class="flex flex-col items-center my-3 space-y-2">
                     <h1 class="text-gray-900 text-lg">
                         $6.000
@@ -260,35 +276,73 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-orange-400 text-white py-6">
-        <div class="mx-auto flex flex-col items-center">
-            <div class="mb-4 text-center">
-                <div class="mb-4 text-center">
-                    <p class="text-lg font-semibold">La Pizza De El Canas</p>
+
+    <footer>
+        <div class="p-10 bg-gray-800 text-gray-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="mb-5">
+                        <h4 class="pb-4">Compañia</h4>
+                        <p class="text-gray-500">
+                            Crr4 #6a-47 <br>
+                            Tunja-Boyaca <br><br>
+                            <strong>Telefono:</strong> +57 3106749454 <br>
+                            <strong>Email:</strong> elcanas@gmail.com
+                        </p>
+                    </div>
+                    <div class="mb-5">
+                        <h4 class="pb-4">Legales</h4>
+                        <ul class="text-gray-500">
+                            <li class="pb-4 hover:text-orange-400 cursor-pointer">Politica de Tratamiento <br> de
+                                Informacion
+                            </li>
+                            <li class="pb-4 hover:text-orange-400 cursor-pointer">Terminos y Condiciones</li>
+                            <li class="pb-4 hover:text-orange-400 cursor-pointer">Acceso y Uso</li>
+                            <li class="pb-4 hover:text-orange-400 cursor-pointer">Terminos legales</li>
+                        </ul>
+                    </div>
+                    <div class="mb-5">
+                        <h4 class="pb-4">Redes sociales</h4>
+                        <ul class="text-gray-500">
+                            <li class="pb-4 hover:text-orange-400 cursor-pointer">Instagram</li>
+                            <li class="pb-4 hover:text-orange-400 cursor-pointer">Facebook</li>
+                            <li class="pb-4 hover:text-orange-400 cursor-pointer">Whatsapp</li>
+                        </ul>
+                    </div>
+                    <div class="mb-5">
+                        <h4 class="pb-4">Acerca de</h4>
+                        <ul class="text-gray-500">
+                            <li class="pb-4 hover:text-orange-400 cursor-pointer">Tendencias</li>
+                            <li class="pb-4 hover:text-orange-400 cursor-pointer">Sustentabilidad</li>
+                            <li class="pb-4 hover:text-orange-400 cursor-pointer">Promociones</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="mb-4 text-center">
-                    <p class="text-sm">Nuestra visión es llegar a más población Colombiana con nuestros sabores a un
-                        precio
-                        razonable.</p>
-                </div>
-                <p class="text-lg font-semibold">Contáctanos en nuestras redes sociales</p>
-                <a href="login" class="text-lg font-semibold">Iniciar Sesion</a>
-                <div class="ml-2">
-                    <a href="https://www.instagram.com/lapizzadeelcanas?igsh=MWh4NHZwc3gxa2pzNA==" target="_blank"
-                        class="text-white mr-2"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100063942588806&mibextid=ZbWKwL" target="_blank"
-                        class="text-white mr-2"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/3106749454?text=Hola,%20me%20gustaría%20ordenar%20una%20pizza"
-                        target="_blank" class="text-white"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-                </p>
             </div>
+        </div>
+        <div class="w-full bg-gray-900 text-gray-500 px-10">
+            <div class="max-w-7xl flex flex-col sm:flex-row py-4 mx-auto justify-between items-center">
+                <div class="text-center">
+                    <div>
+                        Copyright <strong><samp>company</samp></strong> Todos los derechos reservados
+                    </div>
+                </div>
+                <div class="text-center text-xl text-white mb-2">
+                    <a href="https://www.instagram.com/lapizzadeelcanas?igsh=MWh4NHZwc3gxa2pzNA==" target="_blank"
+                        class="w-10 h-10 rounded-full bg-orange-400 hover:bg-orange-300 mx-1 inline-block pt-1"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063942588806&mibextid=ZbWKwL" target="_blank"
+                        class="w-10 h-10 rounded-full bg-orange-400 hover:bg-orange-300 mx-1 inline-block pt-1"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/3106749454?text=Hola,%20me%20gustaría%20ordenar%20una%20pizza"
+                        target="_blank"
+                        class="w-10 h-10 rounded-full bg-orange-400 hover:bg-orange-300 mx-1 inline-block pt-1"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
 
-
-
+            </div>
         </div>
     </footer>
-
 </body>
 
 </html>
