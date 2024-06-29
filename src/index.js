@@ -8,6 +8,8 @@ import loginRouter from './config/login.js'
 import session from 'express-session'
 import errorHandler from './middleware/errorHandler.js'
 import authRouter from './routes/auth.js'
+import productRoutes from './routes/product.js'
+
 
 const port = process.env.PORT || 3000
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -32,6 +34,7 @@ app.use(loginRouter)
 app.use(routes)
 app.use(errorHandler)
 app.use('/auth', authRouter)
+app.use('/products', productRoutes)
 
 app.listen(port, () => {
     console.log(`App listening on port http://localhost:${port}`)

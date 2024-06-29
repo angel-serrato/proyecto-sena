@@ -1,5 +1,6 @@
 import { Router } from 'express'
 const router = Router()
+import { createProduct } from '../controllers/productController.js'
 
 router.get('/', (req, res) => {
     res.render('index', { title: 'La pizza de el canas' })
@@ -28,5 +29,7 @@ router.get('/admin', (req, res) => {
         res.redirect('/login')
     }
 })
+
+
 
 export default router

@@ -1,4 +1,3 @@
-// auth.js
 import express from 'express';
 const router = express.Router();
 import User from '../models/user.js';
@@ -15,6 +14,5 @@ router.post('/login', async (req, res) => {
         res.redirect('/admin');
     }
 });
-
 
 export default router;
