@@ -11,7 +11,7 @@ import authRouter from './routes/auth.js'
 import productRoutes from './routes/product.js'
 
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const app = express()
 
@@ -24,7 +24,11 @@ app.set('views', join(__dirname, 'views'))
 app.use(session({
     secret: 'secret',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    // Session timeout of 60 seconds
+    cookie: {
+        maxAge: 60000
+    }
 }))
 
 app.use(express.json())

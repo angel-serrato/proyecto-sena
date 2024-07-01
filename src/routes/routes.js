@@ -30,6 +30,4 @@ router.get('/admin', (req, res) => {
     }
 })
 
-
-
 export default router
